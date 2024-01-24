@@ -1,4 +1,4 @@
-import { AuthContext } from "@/app/guest/layout";
+import { AuthContext } from "@/app/guest/user/dashboard/layout";
 import { dateFormatter } from "@/utils/date-formatter";
 import { useContext, useEffect, useState } from "react";
 import "./styles.css";

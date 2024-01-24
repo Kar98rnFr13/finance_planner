@@ -6,7 +6,7 @@ import { useContext, useEffect, useState } from "react";
 import "./styles.css";
 import { dateFormatter } from "@/utils/date-formatter";
 import { auth } from "@/firebase";
-import { AuthContext } from "@/app/guest/layout";
+import { AuthContext } from "@/app/guest/user/dashboard/layout";
 
 export default function UpcomingTransactions({ user_id }) {
   const [trans, setTrans] = useState([]);
@@ -21,11 +21,9 @@ export default function UpcomingTransactions({ user_id }) {
           if (result instanceof Error) {
             console.log("err", c.message);
           } else {
-            console.log("succes-collection-list");
             // const upcoming =
 
             setTrans(result.upcomingTransactions);
-            console.log("upcoming", result.upcomingTransactions);
           }
         } catch (error) {
           console.log(error.message);
@@ -47,7 +45,6 @@ export default function UpcomingTransactions({ user_id }) {
           currentDate.getTime() >= scheduledDate.getTime() &&
           !transaction.sch.executed
         ) {
-          console.log("past", transaction.sch);
           const sch = transaction.sch;
           sch.executed = true;
 

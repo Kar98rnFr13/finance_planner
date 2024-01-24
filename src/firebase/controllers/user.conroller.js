@@ -54,7 +54,6 @@ async function getUser(user_id) {
       currentUser = user.data();
       return currentUser;
     } else {
-      console.log("user not found");
       return new Error("user not found");
     }
   } catch (error) {

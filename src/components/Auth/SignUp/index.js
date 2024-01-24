@@ -18,7 +18,6 @@ export default function SignUp() {
 
   const handleSingUp = async (e) => {
     e.preventDefault();
-    console.log(e.target);
     try {
       const data = {
         full_name: e.target.name.value,

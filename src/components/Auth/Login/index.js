@@ -3,13 +3,10 @@
 import "../styles.css";
 import { loginUser } from "@/firebase/controllers/user.conroller";
 import { useRef } from "react";
-import { useContext } from "react";
 import { useRouter } from "next/navigation";
-import { AuthContext } from "@/app/guest/layout";
 
 export default function Login() {
   const formRef = useRef(null);
-  const context = useContext(AuthContext);
   const router = useRouter();
 
   const handleLogin = async (e) => {
@@ -25,7 +22,6 @@ export default function Login() {
       } else {
         // formRef.current.reset();
 
-        context.setUser(user);
         router.push("/guest/user/dashboard");
       }
     } catch (error) {

@@ -1,7 +1,11 @@
 .exp-con {
   width: 100%;
   max-width: 400px;
+}
+
+.exp-header {
   margin-top: 40px;
+  
 }
 
 .exp {

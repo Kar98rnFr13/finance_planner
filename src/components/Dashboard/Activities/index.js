@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import "./styles.css";
 import { auth, db } from "@/firebase";
 import { collection, onSnapshot, query, where } from "firebase/firestore";
-import { AuthContext } from "@/app/guest/layout";
+import { AuthContext } from "@/app/guest/user/dashboard/layout";
 
 export default function Activities() {
   const [loading, setLoading] = useState(false);

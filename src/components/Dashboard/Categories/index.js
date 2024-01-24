@@ -11,7 +11,7 @@ import "./styles.css";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import { auth } from "@/firebase";
-import { AuthContext } from "@/app/guest/layout";
+import { AuthContext } from "@/app/guest/user/dashboard/layout";
 
 export default function Categories({ categories, user_id }) {
   const formRef = useRef(null);
@@ -69,7 +69,7 @@ export default function Categories({ categories, user_id }) {
         if (c instanceof Error) {
           console.log("err", c.message);
         } else {
-          console.log("succes-collection-list");
+          
 
           setCategory(c);
         }
@@ -113,11 +113,12 @@ export default function Categories({ categories, user_id }) {
         </Modal>
       )}
 
+      <div className="exp-header">
+        <h2>Expenses categories</h2>
+      </div>
       {categories.map((x) => {
         return (
           <div className="exp-con">
-            <h2>Expenses categories</h2>
-
             <div className="exp">
               <p>
                 {x.name}(€): {x.amt}

@@ -1,6 +1,6 @@
 "use client";
 
-import { AuthContext } from "@/app/guest/layout";
+import { AuthContext } from "@/app/guest/user/dashboard/layout";
 import { getUser } from "@/firebase/controllers/user.conroller";
 import { useEffect, useState } from "react";
 
@@ -76,7 +76,7 @@ export default function Dashboard() {
 
   return (
     <>
-      {loading ? (
+      {context.pageLoad ? (
         <div className="loader">
           <h1>Loading...</h1>
         </div>
@@ -86,17 +86,28 @@ export default function Dashboard() {
 
           <div className="bal">
             <div className="dets">
-              <h3>Salary(€): {currentUser.salary}</h3>
-              <h3>Total allocation made to exp: {accumulatedExp} </h3>
+              <h3>Salary(€): {context.user.salary}</h3>
+              <h3>
+                Total allocation made to exp:{" "}
+                {context.user.categories.reduce((total, currentValue) => {
+                  return total + Number(currentValue.amt);
+                }, 0)}{" "}
+              </h3>
 
               {/* <h3>Spent: {0}</h3> */}
 
-              <h3>Bal(€): {currentUser.salary - accumulatedExp}</h3>
+              <h3>
+                Bal(€):{" "}
+                {context.user.salary -
+                  context.user.categories.reduce((total, currentValue) => {
+                    return total + Number(currentValue.amt);
+                  }, 0)}
+              </h3>
             </div>
 
-            <Activities user_id={currentUser.user_id} />
+            <Activities user_id={context.user.user_id} />
             <Categories
-              categories={categories}
+              categories={context.user.categories}
               user_id={context.user.user_id}
             />
 

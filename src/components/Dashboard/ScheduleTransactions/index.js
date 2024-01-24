@@ -1,4 +1,4 @@
-import { AuthContext } from "@/app/guest/layout";
+import { AuthContext } from "@/app/guest/user/dashboard/layout";
 import {
   allCategories,
   updateTransaction,
@@ -33,7 +33,6 @@ export default function Scheduler({ user_id }) {
       if (c instanceof Error) {
         toast.danger(c.message);
       } else {
-        console.log("updated");
         toast.success("Payment schedule set.");
       }
     } catch (error) {

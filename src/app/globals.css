@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  padding: 16px;
+  border-color: #fff;
+}
+
 @media (max-width: 550px) {
   h2 {
     font-size: 18px;
