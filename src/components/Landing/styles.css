@@ -1,0 +1,26 @@
+.landing {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 16px;
+}
+
+.header h1 {
+  font-size: 32px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 20px;
+  }
+}

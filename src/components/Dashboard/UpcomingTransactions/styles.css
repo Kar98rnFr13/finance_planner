@@ -1,0 +1,22 @@
+.tran {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 40px;
+}
+
+.t-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding-inline: 16px;
+  padding-block: 32px;
+  gap: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin-block: 40px;
+  text-transform: capitalize;
+}

@@ -1,0 +1,37 @@
+.exp-con {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 40px;
+}
+
+.exp {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+.exp button {
+  padding: 10px;
+  font-size: 15px;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  margin-block: 10px;
+}
+
+.categories input {
+  width: 100%;
+  padding: 16px;
+}
+
+.categories button {
+  padding-block: 16px;
+  width: 100%;
+}

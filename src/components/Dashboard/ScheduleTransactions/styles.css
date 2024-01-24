@@ -1,0 +1,38 @@
+.con {
+  width: 100%;
+  max-width: 400px;
+  padding-inline: 16px;
+  margin-top: 40px;
+}
+
+.flex-con {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.flex-con input {
+  padding-block: 16px;
+}
+
+.desc p {
+  margin-block: 10px;
+}
+
+.flex-con-item,
+input,
+button {
+  margin-right: 10px;
+}
+.flex-con-item button {
+  padding-block: 16px;
+  padding-inline: 5px;
+}
+
+h2 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+  font-weight: 400;
+  text-align: center;
+}
